@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --site-red-100:#E50914;
+  --site-red-200:rgb(193,17,25);
+  --site-red-300:rgb(235, 57, 66);
+  --site-dark-100:rgba(22,22,22,0.7);
+  --site-dark-200:rgba(70, 90, 126, 0.4);
+  --site-dark-300:rgb(35,35,35);
+  --site-dark-400:rgba(128,128,128,0.7);
+  --site-dark-500:rgb(45,45,45);
+  --site-dark-600:rgb(65,65,65);
+  --site-dark-700:rgba(0,0,0,0.7);
+  --site-blue-100: #0071eb;
+  --site-white-100:rgba(255,255,255,0.7);
+}
+
+
+body{
+  background-color: #000;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.lang-switcher{
+  select{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    
+    
+  }
+}
+
+.mov_title{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) ;
+  transition-delay: 1s;
+
+  &.active{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tv-placeholder{
+  background: url(/public/videos/video-tv-0819.m4v);
+}
+.phone-wrapper{
+  background: url(/public/assets/mobile.jpg);
+}
